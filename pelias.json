@@ -1,0 +1,190 @@
+{
+    "logger": {
+        "level": "info",
+        "timestamp": false
+    },
+    "esclient": {
+        "apiVersion": "6.8",
+        "hosts": [
+            {
+                "host": "elasticsearch"
+            }
+        ]
+    },
+    "schema": {
+        "typeName": "_doc"
+    },
+    "elasticsearch": {
+        "settings": {
+            "index": {
+                "refresh_interval": "10s",
+                "number_of_replicas": "0",
+                "number_of_shards": "1"
+            }
+        }
+    },
+    "acceptance-tests": {
+        "endpoints": {
+            "docker": "http://api:4000/v1/"
+        }
+    },
+    "api": {
+        "services": {
+            "pip": {
+                "url": "http://pip:4200"
+            },
+            "libpostal": {
+                "url": "http://libpostal:4400"
+            },
+            "placeholder": {
+                "url": "http://placeholder:4100"
+            },
+            "interpolation": {
+                "url": "http://interpolation:4300"
+            }
+        },
+        "defaultParameters": {
+            "focus.point.lat": 37.33480,
+            "focus.point.lon": -121.89361
+        }
+    },
+    "imports": {
+        "adminLookup": {
+            "enabled": true
+        },
+        "geonames": {
+            "datapath": "/data/geonames",
+            "countryCode": "US"
+        },
+        "openstreetmap": {
+            "download": [
+                {
+                    "sourceURL": "https://download.geofabrik.de/north-america/us/california-latest.osm.pbf"
+                }
+            ],
+            "leveldbpath": "/tmp",
+            "datapath": "/data/openstreetmap",
+            "import": [
+                {
+                    "filename": "california-latest.osm.pbf"
+                }
+            ]
+        },
+        "openaddresses": {
+            "datapath": "/data/openaddresses",
+            "files": [
+                "us/ca/alameda.csv",
+                "us/ca/amador.csv",
+                "us/ca/berkeley.csv",
+                "us/ca/butte.csv",
+                "us/ca/calaveras.csv",
+                "us/ca/city_of_anaheim.csv",
+                "us/ca/city_of_bakersfield.csv",
+                "us/ca/city_of_bishop.csv",
+                "us/ca/city_of_brea.csv",
+                "us/ca/city_of_burbank.csv",
+                "us/ca/city_of_carson.csv",
+                "us/ca/city_of_culver_city.csv",
+                "us/ca/city_of_cupertino.csv",
+                "us/ca/city_of_elk_grove.csv",
+                "us/ca/city_of_emeryville.csv",
+                "us/ca/city_of_eureka.csv",
+                "us/ca/city_of_fullerton.csv",
+                "us/ca/city_of_garden_grove.csv",
+                "us/ca/city_of_hermosa_beach.csv",
+                "us/ca/city_of_huntington_beach.csv",
+                "us/ca/city_of_irvine.csv",
+                "us/ca/city_of_jackson.csv",
+                "us/ca/city_of_kerman.csv",
+                "us/ca/city_of_laguna_niguel.csv",
+                "us/ca/city_of_lancaster.csv",
+                "us/ca/city_of_long_beach.csv",
+                "us/ca/city_of_los_angeles.csv",
+                "us/ca/city_of_newport_beach.csv",
+                "us/ca/city_of_orange.csv",
+                "us/ca/city_of_oroville.csv",
+                "us/ca/city_of_palo_alto.csv",
+                "us/ca/city_of_piedmont.csv",
+                "us/ca/city_of_redlands.csv",
+                "us/ca/city_of_riverside.csv",
+                "us/ca/city_of_san_diego.csv",
+                "us/ca/city_of_san_jose.csv",
+                "us/ca/city_of_san_jose2.csv",
+                "us/ca/city_of_san_juan_capistrano.csv",
+                "us/ca/city_of_san_luis_obispo.csv",
+                "us/ca/city_of_santa_clara.csv",
+                "us/ca/city_of_santa_cruz.csv",
+                "us/ca/city_of_south_lake_tahoe.csv",
+                "us/ca/city_of_sunnyvale.csv",
+                "us/ca/city_of_temecula.csv",
+                "us/ca/city_of_walnut_creek.csv",
+                "us/ca/city_of_west_sacramento.csv",
+                "us/ca/city_of_whittier.csv",
+                "us/ca/del_norte.csv",
+                "us/ca/el_dorado.csv",
+                "us/ca/fresno.csv",
+                "us/ca/glenn.csv",
+                "us/ca/inyo.csv",
+                "us/ca/kings.csv",
+                "us/ca/lake.csv",
+                "us/ca/lassen.csv",
+                "us/ca/los_angeles.csv",
+                "us/ca/madera.csv",
+                "us/ca/marin.csv",
+                "us/ca/mendocino.csv",
+                "us/ca/merced.csv",
+                "us/ca/mono.csv",
+                "us/ca/monterey.csv",
+                "us/ca/napa.csv",
+                "us/ca/nevada.csv",
+                "us/ca/orange.csv",
+                "us/ca/placer.csv",
+                "us/ca/plumas.csv",
+                "us/ca/riverside.csv",
+                "us/ca/san_benito.csv",
+                "us/ca/san_diego.csv",
+                "us/ca/san_francisco.csv",
+                "us/ca/san_luis_obispo.csv",
+                "us/ca/santa_clara.csv",
+                "us/ca/santa_cruz.csv",
+                "us/ca/shasta.csv",
+                "us/ca/siskiyou.csv",
+                "us/ca/solano.csv",
+                "us/ca/sonoma.csv",
+                "us/ca/sutter.csv",
+                "us/ca/trinity.csv",
+                "us/ca/tulare.csv",
+                "us/ca/tuolumne.csv",
+                "us/ca/ventura.csv",
+                "us/ca/yolo.csv",
+                "us/ca/yuba.csv"
+            ]
+        },
+        "polyline": {
+            "datapath": "/data/polylines",
+            "files": [
+                "extract.0sv"
+            ]
+        },
+        "whosonfirst": {
+            "datapath": "/data/whosonfirst",
+            "importVenues": false,
+            "importPostalcodes": true,
+            "importPlace": [
+                "85688637"
+            ]
+        },
+        "interpolation": {
+            "download": {
+                "tiger": {
+                    "datapath": "/data/tiger",
+                    "states": [
+                        {
+                            "state_code": 6
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
