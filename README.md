@@ -29,6 +29,14 @@ https://github.com/whosonfirst-data/whosonfirst-data-postalcode-us
 (Use the California ID in importPlace in pelias.json)
 https://spelunker.whosonfirst.org/id/85688637/
 
+## U.S. Census TIGER/Line Data
+
+https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+
+## GeoNames Data
+
+https://www.geonames.org/export/
+
 ## Docker Prep
 
 To make this work, you'll need recent versions of Docker and Docker Compose. I doubt this will work on Windows. I'm assuming you have a Mac or Linux machine. 
