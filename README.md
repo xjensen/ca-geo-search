@@ -5,12 +5,14 @@ This is a rough geocoder and geospacial search engine for the State of Californi
 ## Open Street Map Data
 
 https://download.geofabrik.de/north-america/us/california.html
+
 https://download.geofabrik.de/north-america/us/california-latest.osm.pbf
 
 
 ## Open Addresses Data
 
 http://results.openaddresses.io/
+
 https://data.openaddresses.io/openaddr-collected-us_west.zip
 
 
@@ -19,7 +21,9 @@ https://data.openaddresses.io/openaddr-collected-us_west.zip
 Warning: full planet download is usually required and eats up 27GB.
 
 https://www.whosonfirst.org/data/available/
+
 https://github.com/whosonfirst-data/whosonfirst-data-admin-us
+
 https://github.com/whosonfirst-data/whosonfirst-data-postalcode-us
 
 (Use the California ID in importPlace in pelias.json)
