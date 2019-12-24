@@ -31,6 +31,8 @@ To make this work, you'll need recent versions of Docker and Docker Compose. I d
 
 That machine will need some beef, because we'll be pushing a lot of bits. Make sure you have about 40GB free disk space before starting. You'll probably want at least 16GB of RAM.
 
+> Docker Compose is fine for development. It's probably not the best for production here. If we use this, we'll want to piece out these services for use on more reliable and scalable infrastructure: AWS, Azure, GCP, Kubernetes and friends, etc.  
+
 First, prepare the data directory for elasticsearch.
 
 ```
